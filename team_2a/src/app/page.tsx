@@ -1,9 +1,13 @@
 import Image from "next/image";
+import styles from "../../styles/Search_box.module.css";
 
 export default function Home() {
   return (
     <>
-    <h1>title_2A</h1>
+
+    <div className={styles.seach_space}>
+      <input placeholder="検索" className={styles.seach_box}></input>
+    </div>
 
     </>
   );
