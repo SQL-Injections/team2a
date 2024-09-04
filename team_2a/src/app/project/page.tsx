@@ -1,8 +1,10 @@
 import styles from "../../../styles/project.module.css";
+import Header from "../../components/Header";
 
 export default function Home() {
   return (
     <>
+    <Header/>
     <div className={styles.main}>
     <div className={styles.project_title}>〇〇部署　〇〇〇〇プロジェクト</div>
     <div className={styles.detail_box}>
