@@ -23,3 +23,11 @@
 .detail_content{
     margin: 16px;
 }
+.book_scroll{
+    overflow-x: auto; /* 横スクロールを有効にする */
+    display: flex; /* 子要素を横に並べる */
+    background-color: #e0e0e0;
+}
+.book_scroll > * {
+    flex-shrink: 0; /* 子要素が親要素の幅に合わせて縮小しないようにする */
+}
