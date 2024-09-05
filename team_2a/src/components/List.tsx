@@ -46,7 +46,7 @@ const List: React.FC<ListProps> = ({ titles, contents }) => {
                                 >
                                     {cellIndex === 0 ? (
                                         // 最初のセルだけLinkでラップして遷移可能にする
-                                        <Link href={`/projects/${cellIndex}`} className="text-blue-600 hover:underline">
+                                        <Link href={`/project/${rowIndex}`} className="text-blue-600 hover:underline">
                                             {Array.isArray(cell) ? cell.join(', ') : cell}
                                         </Link>
                                     ) : // 配列ならjoinで結合し、文字列ならそのまま表示
