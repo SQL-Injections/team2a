@@ -4,7 +4,7 @@ import Header from '../../../components/Header'
 import styles from '../../../../styles/project.module.css'
 import BookContent from '../../../components/Book'
 import React from 'react'
-import dat from '../data'
+import dat from '../../../../data/data'
 import { useParams } from 'next/navigation'
 
 const data = dat()
