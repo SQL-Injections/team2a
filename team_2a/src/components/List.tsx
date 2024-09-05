@@ -1,5 +1,6 @@
 import React from 'react'
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material'
+import Link from 'next/link'
 
 interface Title {
     titleString: string
@@ -43,8 +44,17 @@ const List: React.FC<ListProps> = ({ titles, contents }) => {
                                     }`}
                                     style={{ width: `${(titles[cellIndex].width / totalWidth) * 100}%` }}
                                 >
-                                    {/* 配列ならjoinで結合し、文字列ならそのまま表示 */}
-                                    {Array.isArray(cell) ? cell.join(', ') : cell}
+                                    {cellIndex === 0 ? (
+                                        // 最初のセルだけLinkでラップして遷移可能にする
+                                        <Link href={`/projects/${cellIndex}`} className="text-blue-600 hover:underline">
+                                            {Array.isArray(cell) ? cell.join(', ') : cell}
+                                        </Link>
+                                    ) : // 配列ならjoinで結合し、文字列ならそのまま表示
+                                    Array.isArray(cell) ? (
+                                        cell.join(', ')
+                                    ) : (
+                                        cell
+                                    )}
                                 </TableCell>
                             ))}
                         </TableRow>
