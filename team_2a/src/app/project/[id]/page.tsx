@@ -6,6 +6,7 @@ import BookContent from '../../../components/Book'
 import React from 'react'
 import dat from '../../../../data/data'
 import { useParams } from 'next/navigation'
+import Link from 'next/link'
 
 const data = dat()
 
@@ -33,6 +34,11 @@ export default function Home() {
                             <BookContent url={book} key={index} />
                         ))}
                     </div>
+                </div>
+                <div className={styles.back_to_home}>
+                    <Link href='/'>
+                        <div className={styles.back_to_home_btn}>リストに戻る</div>
+                    </Link>
                 </div>
             </div>
         </>

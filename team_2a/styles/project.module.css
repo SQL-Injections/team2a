@@ -31,3 +31,28 @@
 .book_scroll > * {
     flex-shrink: 0; /* 子要素が親要素の幅に合わせて縮小しないようにする */
 }
+
+.back_to_home{
+    width: 200px;
+    height: 50px;
+    background-color: #ed5fd5;
+    border-radius: 10px;
+    display: relative; 
+    /*右寄せ*/
+    float: right;
+    /*30px下に*/
+    margin-top: 30px;
+    justify-content: center; /* 水平方向に中央揃え */
+    align-items: center; /* 垂直方向に中央揃え */
+}
+
+.back_to_home_btn {
+    position: relative;
+    top:25%;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 6px;
+    color: white;
+    width: 100%; /* 親要素に合わせる */
+    height: 100%; /* 親要素に合わせる */
+}
