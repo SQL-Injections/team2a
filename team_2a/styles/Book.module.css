@@ -28,6 +28,10 @@
     align-items: center;
 }
 
+.bg:hover .image{
+    opacity: 0.5;
+}
+
 .title{
     position: absolute;
     bottom:0%;
